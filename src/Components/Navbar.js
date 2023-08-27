@@ -6,8 +6,7 @@ import { BsFillMoonFill } from "react-icons/bs";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import '../styles/Navbar.scss'
 import { Link } from "@mui/material";
-
-
+import Switch from "@mui/material/Switch";
 
 
 function Navbar({ changeTheme, currentTheme }) {
@@ -23,6 +22,7 @@ function Navbar({ changeTheme, currentTheme }) {
         </div>
         <div className="links-container" onClick={(e) => e.stopPropagation()}>
           <div className="toggle">
+         
             {navState ? (
               <MdClose onClick={() => setNavState(false)} />
             ) : (
@@ -34,6 +34,11 @@ function Navbar({ changeTheme, currentTheme }) {
               />
             )}
             <div onClick={changeTheme}>
+            <Switch
+                checked={currentTheme === "dark"}
+                onChange={changeTheme}
+                color="primary"
+              />
               {currentTheme === "dark" ? (
                 <ImSun className="sun" />
               ) : (
@@ -58,6 +63,12 @@ function Navbar({ changeTheme, currentTheme }) {
               <li>
                 <Link href="#"> About</Link>
               </li>
+              <Switch
+                  checked={currentTheme === "dark"}
+                  onChange={changeTheme}
+                  color="primary"
+                />
+             
               <li onClick={changeTheme} className="color-mode">
                 {currentTheme === "dark" ? (
                   <ImSun className="sun" />
