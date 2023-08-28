@@ -3,7 +3,7 @@ import Footer from './Components/Footer';
 import Home from './Components/Home'
 import Navbar from './Components/Navbar'
 import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider} from '@mui/material/styles';
 import {useState} from 'react'
 import { darkTheme,lightTheme } from './Theme';
 
@@ -20,7 +20,6 @@ function App() {
      <CssBaseline />
     <Navbar changeTheme={handleDarkModeClick} currentTheme={darkMode} />
     <Home />
-     <h2>Hello Spryt</h2>
      <Footer/>
     </div>
     </ThemeProvider>

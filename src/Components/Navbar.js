@@ -3,7 +3,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { ImSun } from "react-icons/im";
 import { BsFillMoonFill } from "react-icons/bs";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import '../styles/Navbar.scss'
 import { Link } from "@mui/material";
 import Switch from "@mui/material/Switch";
@@ -35,7 +34,7 @@ function Navbar({ changeTheme, currentTheme }) {
             )}
             <div onClick={changeTheme}>
             <Switch
-                checked={currentTheme === "dark"}
+                checked={currentTheme === "light"}
                 onChange={changeTheme}
                 color="primary"
               />
@@ -64,7 +63,7 @@ function Navbar({ changeTheme, currentTheme }) {
                 <Link href="#"> About</Link>
               </li>
               <Switch
-                  checked={currentTheme === "dark"}
+                  checked={currentTheme === "light"}
                   onChange={changeTheme}
                   color="primary"
                 />

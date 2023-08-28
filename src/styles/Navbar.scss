@@ -32,10 +32,12 @@ nav {
           .sun {
             color: yellow;
             font-size: 1.4rem;
+            cursor: pointer;
           }
           .moon {
             color: blue;
             font-size: 1.4rem;
+            cursor: pointer;
           }
           svg {
             color: var(--svg-color);
@@ -71,10 +73,12 @@ nav {
               .sun {
                 color: yellow;
                 font-size: 1.4rem;
+                cursor: pointer;
               }
               .moon {
                 color: blue;
                 font-size: 1.4rem;
+                cursor: pointer;
               }
             }
             .color-mode {
